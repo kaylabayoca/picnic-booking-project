@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meadow Day Picnic Co. — Reserve a Spot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <p class="hero-eyebrow">Meadow Day Picnic Co.</p>
+    <h1>Reserve your patch of grass.</h1>
+    <p class="hero-sub">Pick a spot, pick a day, and we'll check the sky for you before you commit a blanket to it.</p>
+  </header>
+
+  <main class="layout">
+
+    <section class="card weather-card" id="weatherCard">
+      <h2>Sky check</h2>
+      <p class="hint">Type the city where you'd like to picnic — we'll pull today's weather so you know what to pack.</p>
+      <div id="weatherResult" class="weather-result">
+        <p class="weather-placeholder">Enter a city below to see the forecast.</p>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <h2>Booking details</h2>
+      <form id="bookingForm" novalidate>
+
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Alex Rivera" required>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+        <p class="field-note">Your booking confirmation (PDF) will be sent here.</p>
+
+        <label for="city">Picnic city</label>
+        <input type="text" id="city" name="city" placeholder="e.g. Tagaytay" required>
+
+        <label for="date">Picnic date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="guests">Number of guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="30" value="2" required>
+
+        <label for="spot">Spot type</label>
+        <select id="spot" name="spot" required>
+          <option value="Riverside">Riverside — shaded, near the water</option>
+          <option value="Hilltop">Hilltop — open view, breezy</option>
+          <option value="Orchard">Orchard — under the fruit trees</option>
+        </select>
+
+        <input type="hidden" id="weatherSummary" name="weatherSummary" value="">
+
+        <button type="submit" id="submitBtn">Confirm booking</button>
+
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for a midterm project — Web Form &amp; Apps Script Automation.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
