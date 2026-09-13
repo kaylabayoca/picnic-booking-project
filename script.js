@@ -1,14 +1,5 @@
-/* ============================================================
-   1) CONFIG — replace this with your own Apps Script Web App URL
-   ============================================================ */
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz3ARePup44_h55lsHNyCgaLclyZaLdfHAAiyvpse9H_0CllUJ49hlPTv-4r6t0acHDCw/exec";
 
-/* ============================================================
-   2) WEATHER API — Open-Meteo (free, no API key needed)
-   We use two Open-Meteo endpoints:
-   - geocoding-api: turns a city name into latitude/longitude
-   - api.open-meteo.com: turns lat/long into current weather
-   ============================================================ */
 
 const cityInput = document.getElementById("city");
 const weatherResult = document.getElementById("weatherResult");
