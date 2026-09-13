@@ -1,24 +1,3 @@
-/**
- * Meadow Day Picnic Co. — Booking automation
- *
- * What this script does:
- * 1. Receives booking form data (POST request) from the website.
- * 2. Creates a Google Doc with the booking details + weather summary.
- * 3. Converts that Doc into a PDF.
- * 4. Emails the PDF to the customer's address.
- * 5. Cleans up the temporary Doc file from Drive.
- *
- * SETUP:
- * 1. Go to https://script.google.com and create a new project.
- * 2. Delete the default code and paste this file in.
- * 3. Click Deploy > New deployment > select type "Web app".
- *    - Execute as: Me
- *    - Who has access: Anyone
- * 4. Copy the Web App URL it gives you into APPS_SCRIPT_URL in script.js.
- * 5. The first time it runs, Google will ask you to authorize the script
- *    (it needs permission to create Docs/Drive files and send email).
- */
-
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
